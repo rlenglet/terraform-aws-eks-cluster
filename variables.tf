@@ -3,6 +3,12 @@ variable "cluster_name" {
   type        = string
 }
 
+variable "tags" {
+  description = "Tags added to every configured resource"
+  type        = map(string)
+  default     = {}
+}
+
 # This cluster role must already exist and be attached the
 # AmazonEKSClusterPolicy, cf.
 # https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html
